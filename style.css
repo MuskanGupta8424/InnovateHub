@@ -16,7 +16,12 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  overflow: hidden;
 }
+.menu-toggle {
+  display: none;
+}
+
 #sidebar {
   width: 20%;
   height: 100%;
@@ -31,7 +36,17 @@ body {
   /* gap: 7px; */
   /* overflow: hidden; */
   align-items: center;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
 }
+#sidebar.show {
+  transform: translateX(-100%);
+}
+
+#contentbox {
+  flex: 1;
+}
+
 .logodiv,
 .navbar {
   width: 100%;
@@ -44,13 +59,11 @@ body {
 }
 .navbar {
   /* border-bottom: 1px solid #969696; */
-  
 }
 .searchdiv {
   padding: 0.2rem 0.4rem;
   border-radius: 5px;
   border: 1px solid #969696;
-
 }
 .nav-icon {
   padding: 0.2rem 0.4rem;
@@ -72,11 +85,10 @@ input {
   padding: 0.4rem 0.4rem;
   /* border: 1px solid #969696; */
   border-radius: 5px;
-  gap:5px;
-overflow-x: hidden;
-
+  gap: 5px;
+  overflow-x: hidden;
 }
-.stdiv{
+.stdiv {
   width: 95%;
   min-height: 70%;
   /* background-color: rgb(245, 186, 186); */
@@ -88,91 +100,96 @@ overflow-x: hidden;
   /* border: 1px solid #969696; */
   /* border-radius: 5px; */
   /* gap:5px; */
-overflow-x: hidden;
+  overflow-x: hidden;
 }
-#firstsec{
-    width: 100%;
+#firstsec {
+  width: 100%;
   min-height: 28%;
-    border-radius: 10px;
+  border-radius: 10px;
   /* border: 1px solid gray; */
   padding: 0rem 0.2rem;
-display: flex;
-align-items: flex-start;
-justify-content: center;
-flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
-#secondsec{
+#secondsec {
   width: 100%;
   min-height: 45%;
   border-radius: 10px;
   /* background-color: antiquewhite; */
-/* border: 1px solid #969696; */
-padding: 0rem 0.2rem;
-display: flex;
-align-items: flex-start;
-justify-content: flex-start;
-flex-direction: column;
-overflow-x: hidden;
+  /* border: 1px solid #969696; */
+  padding: 0rem 0.2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 *::-webkit-scrollbar {
   width: 5px; /* Width of the scrollbar */
 }
 
-#thirdsec{
+#thirdsec {
   width: 100%;
   min-height: 25%;
   /* padding-top: 3rem; */
   border-radius: 10px;
   /* background-color: antiquewhite; */
-/* border: 1px solid #969696; */
-padding: 0rem 0.2rem;
-display: flex;
-align-items: flex-start;
-justify-content: flex-end;
-flex-direction: column;
-/* overflow-x: hidden; */
+  /* border: 1px solid #969696; */
+  padding: 0rem 0.2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  /* overflow-x: hidden; */
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #c5c4c4; 
-  border-radius: 30px;/* Color of the scrollbar thumb */
+  background-color: #c5c4c4;
+  border-radius: 30px; /* Color of the scrollbar thumb */
 }
 
 *::-webkit-scrollbar-track {
   background-color: #f1f1f1; /* Color of the scrollbar track */
 }
 
-.accordion{
+.accordion {
   width: 100%;
- background-color: transparent;
- outline: none;
+  background-color: transparent;
+  outline: none;
   border: none;
   overflow-x: hidden;
 }
-.accordion-body{
+.accordion-body {
   /* display: flex;
   flex-direction: column; */
-  padding-top: 0.4rem ;
-  padding-bottom: 0.4rem ;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
-.accordion-body>h5{
+.accordion-body > h5 {
   height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-.accordion-button{
+.accordion-button {
   height: 30px;
   /* outline: none;
   border: none; */
 }
-#secondsec>.createteam{
+#secondsec > .createteam {
   justify-content: space-between;
 }
-h5{width: 100%;
-    padding: 0.5rem 0.4rem;
-   font-size: 1.1rem;
-    color: black;
+h5 {
+  width: 100%;
+  padding: 0.5rem 0.4rem;
+  font-size: 1.1rem;
+  color: black;
 }
-h5:hover,.accordion-button:hover{
-    background-color: rgb(0,0,0,0.08);
-    border-radius: 5px;
+h5:hover,
+.accordion-button:hover {
+  background-color: rgb(0, 0, 0, 0.08);
+  border-radius: 5px;
 }
 .logohead {
   width: 80%;
@@ -226,45 +243,46 @@ h5:hover,.accordion-button:hover{
   border: 1px dashed #969696;
   color: rgb(147, 146, 146);
 }
-#producttable{
-    width: 100%;
-    height:80%;
-    /* background-color: red; */
-    overflow-x:hidden;  
+#producttable {
+  width: 100%;
+  height: 80%;
+  /* background-color: red; */
+  overflow-x: hidden;
 }
-#tablebox{
-min-height: 350px;
-width: 100%;
-background-color: rgb(228, 228, 248);
+#tablebox {
+  min-height: 350px;
+  width: 100%;
+  /* background-color: rgb(228, 228, 248); */
 }
-#brandcol{
-    min-width: 150px;
+#brandcol {
+  min-width: 150px;
 }
-#brandcol1{
-    min-width: 120px;
+#brandcol1 {
+  min-width: 120px;
 }
-#brandcol2{
-    min-width: 100px;
+#brandcol2 {
+  min-width: 100px;
 }
-#brandcol3{
-    min-width: 40px;
+#brandcol3 {
+  min-width: 40px;
   position: relative;
 }
-#brandcol3>span>i{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+#brandcol3 > span > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.createteam,.createteam3{
+.createteam,
+.createteam3 {
   display: flex;
   gap: 7px;
 }
-.createteam3{
-  background-color: rgb(0,0,0,0.08);
+.createteam3 {
+  background-color: rgb(0, 0, 0, 0.08);
   border-radius: 5px;
 }
-.createteam3>i{
+.createteam3 > i {
   width: 20px;
   height: 20px;
   padding: 0.2rem;
@@ -275,7 +293,7 @@ transform: translate(-50%,-50%);
   border-radius: 5px;
   font-size: 0.4rem;
 }
-#biling{
+#biling {
   color: #fff;
   font-size: 10px;
   display: flex;
@@ -287,12 +305,27 @@ transform: translate(-50%,-50%);
   background-color: #333;
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 900px) {
   #main {
     flex-direction: column;
   }
-  #sidebar,
+  #sidebar {
+    display: none;
+  }
+
   #contentbox {
     width: 100%;
+  }
+  #producttable {
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    overflow-x: scroll;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu-toggle > #sidebar {
+    display: flex;
   }
 }
